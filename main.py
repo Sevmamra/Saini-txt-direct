@@ -309,7 +309,7 @@ async def send_logs(client: Client, m: Message):  # Correct parameter name
     except Exception as e:
         await m.reply_text(f"Error sending logs: {e}")
 
-@bot.on_message(filters.command(["drm"]) )
+@bot.on_message(filters.command(["nishit"]) )
 async def txt_handler(bot: Client, m: Message):
     editable = await m.reply_text(f"`🔹Hi I am Poweful TXT Downloader📥 Bot.\n🔹Send me the txt file and wait.`")
     input: Message = await bot.listen(editable.chat.id)
