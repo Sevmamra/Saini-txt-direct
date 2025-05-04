@@ -245,9 +245,36 @@ async def restart_handler(_, m):
 @bot.on_message(filters.command(["start"]))
 async def start_command(bot: Client, message: Message):
     random_image_url = random.choice(image_urls)
-    caption = (
-        "𝐇𝐞𝐥𝐥𝐨 𝐃𝐞𝐚𝐫 👋!\n\n➠ 𝐈 𝐚𝐦 𝐚 𝐓𝐞𝐱𝐭 𝐃𝐨𝐰𝐧𝐥𝐨𝐚𝐝𝐞𝐫 𝐁𝐨𝐭\n\n➠ Can Extract Videos & PDFs From Your Text File and Upload to Telegram!\n\n➠ For Guide Use Command /help 📖\n\n➠ 𝐌𝐚𝐝𝐞 𝐁𝐲 : 𝙎𝘼𝙄𝙉𝙄 𝘽𝙊𝙏𝙎 🦁"
-    )
+    caption = """
+╭━━━━━━━━━✦✧✦━━━━━━━━━╮
+      🌟 𝗪𝗘𝗟𝗖𝗢𝗠𝗘 𝗧𝗢 𝗧𝗫𝗧-𝗫𝗧𝗥𝗔𝗖𝗧𝗢𝗥 𝗣𝗥𝗢 🌟  
+╰━━━━━━━━━✦✧✦━━━━━━━━━╯
+
+⚡️ 𝗛𝗲𝘆 𝗕𝗿𝗼! 𝗜'𝗺 𝗡𝗼𝘁 𝗝𝘂𝘀𝘁 𝗔 𝗕𝗼𝘁...  
+𝗜'𝗺 𝗬𝗼𝘂𝗿 𝗣𝗲𝗿𝘀𝗼𝗻𝗮𝗹 𝗙𝗶𝗹𝗲 𝗘𝘅𝘁𝗿𝗮𝗰𝘁𝗶𝗼𝗻 𝗪𝗶𝘇𝗮𝗿𝗱! ✨  
+
+▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰  
+╭━━━━━━━━━━━━━━━━━✦
+┃ 📥 𝗪𝗛𝗔𝗧 𝗜 𝗖𝗔𝗡 𝗗𝗢:  
+┃      
+┃╭➤ 𝗠𝗔𝗚𝗜𝗖𝗔𝗟𝗟𝗬 pull videos/PDFs from .txt files  
+┃├➤ 𝗦𝗠𝗢𝗢𝗧𝗛𝗟𝗬 upload to Telegram (no fuss!) 
+┃╰➤ 𝗛𝗔𝗡𝗗𝗟𝗘𝗦 𝗛𝗧𝗧𝗣𝗦 links like a pro      
+╰━━━━━━━━━━━━━━━━━✦
+▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰  
+💡 𝗝𝗨𝗦𝗧 𝗦𝗘𝗡𝗗 𝗠𝗘 𝗔:  
+• .txt file 𝗢𝗥  
+• https link  
+...and watch the magic happen! ✨  
+
+╭─────────────╮ 
+    🛠️ 𝗡𝗘𝗘𝗗 𝗛𝗘𝗟𝗣? 𝗧𝘆𝗽𝗲: /help  
+╰─────────────╯
+
+╔═════════▣◎▣═════════╗
+┃  Created 𝘄𝗶𝘁𝗵 ❤️ 𝗯𝘆 𝗦𝗔𝗨𝗥𝗔𝗩 𝗕𝗢𝗧𝗦 💻💪      ┃
+╚═════════▣◎▣═════════╝
+"""
     await bot.send_photo(
         chat_id=message.chat.id,
         photo=random_image_url,
@@ -282,21 +309,38 @@ async def info(bot: Client, update: Message):
 
 @bot.on_message(filters.command(["help"]))
 async def txt_handler(client: Client, m: Message):
-    await bot.send_message(m.chat.id, text= (
-        f"🎉Congrats! You are using 𝙎𝘼𝙄𝙉𝙄 𝘽𝙊𝙏𝙎:\n\n"
-        f"✦**Available Commands Here**✦\n\n"
-        f"┣⪼01. /start - To Alive Check Bot \n"
-        f"┣⪼02. /drm - for extract txt file\n"
-        f"┣⪼03. /y2t - YouTube to .txt Convert\n"
-        f"┣⪼04. /t2t - text to .txt Convert\n"
-        f"┣⪼05. /logs - To see Bot Working Logs\n"
-        f"┣⪼06. /cookies - To update YT cookies.\n"
-        f"┣⪼07. /id - Know chat/group/channel ID.\n"
-        f"┣⪼08. /info - Your information.\n"
-        f"┣⪼09. /stop - Stop the Running Task. 🚫\n"
-        f"╰⪼🔗  Direct Send Link For Extract (with https://)\n\n"
-        f"**If you have any questions, feel free to ask [𝙎𝘼𝙄𝙉𝙄 𝘽𝙊𝙏𝙎🐦](https://t.me/+MdZ2996M2G43MWFl)! 💬**\n"
-        )
+    await bot.send_message(m.chat.id, text="""
+╭━━━━━━✦✧✦━━━━━━╮
+         💥𝗣𝗥𝗢 𝗖𝗢𝗠𝗠𝗔𝗡𝗗𝗦 𝗟𝗜𝗦𝗧  
+╰━━━━━━✦✧✦━━━━━━╯
+
+▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰  
+📌 𝗠𝗮𝗶𝗻 𝗙𝗲𝗮𝘁𝘂𝗿𝗲𝘀:  
+
+➥ /start – Bot Status Check  
+➥ /drm – Extract from .txt (Auto)  
+➥ /y2t – YouTube → .txt Converter  
+➥ /t2t – Text → .txt Generator  
+➥ /stop – Cancel Running Task
+
+▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰  
+⚙️ 𝗧𝗼𝗼𝗹𝘀 & 𝗦𝗲𝘁𝘁𝗶𝗻𝗴𝘀:  
+
+➥ /cookies – Update YouTube Cookies  
+➥ /id – Get Chat/User ID  
+➥ /info – User Details  
+➥ /logs – View Bot Activity 
+
+▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰  
+💡 𝗡𝗼𝘁𝗲:  
+
+• Send any https:// link for auto-extraction  
+• Supports batch processing  
+
+╭───────⊰◆⊱───────╮
+      🚀 𝗗𝗲𝘃𝗲𝗹𝗼𝗽𝗲𝗱 𝗕𝘆: 𝗦𝗔𝗨𝗥𝗔𝗩 𝗕𝗢𝗧𝗦  
+╰───────⊰◆⊱───────╯
+"""
     ) 
 
 @bot.on_message(filters.command(["logs"]))
@@ -309,7 +353,7 @@ async def send_logs(client: Client, m: Message):  # Correct parameter name
     except Exception as e:
         await m.reply_text(f"Error sending logs: {e}")
 
-@bot.on_message(filters.command(["nishit"]) )
+@bot.on_message(filters.command(["drm"]) )
 async def txt_handler(bot: Client, m: Message):
     editable = await m.reply_text(f"`🔹Hi I am Poweful TXT Downloader📥 Bot.\n🔹Send me the txt file and wait.`")
     input: Message = await bot.listen(editable.chat.id)
